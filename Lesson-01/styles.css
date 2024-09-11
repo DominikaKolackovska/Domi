@@ -25,7 +25,7 @@ button.grid{
     padding: 16px;
 }
 
-#calculator{
+calculator{
     width: 320;
     height: 476; 
     padding: 24; 
@@ -38,7 +38,7 @@ button.grid{
     display: 'inline-flex'; 
 }
 
-#display{
+display{
    height: 68; 
    padding: 16; 
    background: '#454545'; 
@@ -49,7 +49,7 @@ button.grid{
    gap: 16; 
    display: 'flex'
 }
-#display.input{
+display.input{
     font-size: 36;
     font-family: 'Gill Sans';
     font-weight: '400';
