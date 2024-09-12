@@ -1,63 +1,87 @@
-button{
-    width: 56;
-    height: 56;
-    background: '#3A3A3A';
-    border-radius: 8; 
-    border: '1.20px #4D4C4C solid';
-    justify-content: 'center'; 
-    align-items: 'center';
-    gap: 16; 
-    display: 'flex'
-}
-button.text{
-    color: '#F5F5F5';
-    font-size: 36;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    box-sizing: border-box;
     font-family: 'Gill Sans';
-    font-weight: '400';
-    line-height: 36;
-    word-wrap: 'break-word'
+
 }
 
-button.grid{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    padding: 16px;
-}
-
-calculator{
-    width: 320;
-    height: 476; 
-    padding: 24; 
-    background: '#2C2C2C'; 
-    box-shadow: '0px 1px 1px rgba(43, 45, 52, 0.20)'; 
-    border-radius: 16;  
-    justify-content: 'flex-start';  
-    align-items: 'flex-end';  
-    gap: 16; 
-    display: 'inline-flex'; 
-}
-
-display{
-   height: 68; 
-   padding: 16; 
-   background: '#454545'; 
-   border-radius: 8; 
-   border: '1.20px #4D4C4C solid'; 
-   justify-content: 'flex-end';
-   align-items: 'center'; 
-   gap: 16; 
-   display: 'flex'
-}
-display.input{
-    font-size: 36;
-    font-family: 'Gill Sans';
-    font-weight: '400';
-    line-height: 36;
-    word-wrap: 'break-word'
-}
-
-
-
+body{
+    margin: auto;
+    max-width: 450px; 
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: #2c2c2c;
    
-     
+}
+
+.content{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 16px;
+
+}
+
+.calculator{
+   
+    border-radius: 16px;
+    padding: 24px;
+    display: grid;
+    gap: 16px;
+    box-shadow: 0px 0px 2px #646567e3;
+
+}
+
+input{
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 24px;
+    background: #454545;
+    box-shadow: 0px 3px 15px rgbs(84, 84, 84, 0.1);
+    font-size: 48px;
+    text-align: right;
+    color: #f5f5f5;
+}
+
+input::placeholder{
+    color: #f5f5f593;
+}
+
+button{
+    width: auto;
+    height: 80px;
+    padding: 8px;
+    background: #3a3a3a;
+    border-radius: 16px;
+    border: 1.24px #4d4c4c solid;
+    font-size: 32px;
+    color: #b7b7b7;
+
+}
+
+.button:hover {
+    background-color: #424242;
+  }
+
+.equalButton{
+    background-color: #fed800;
+    color:#232527;
+    border-radius: 16px;
+    border: 1.24px #fed800 solid;
+}
+
+.equalButton:hover{
+    background-color: #c4b425;
+}
+.operator{
+    color: #fed800;
+}
+
+.buttonauto{
+    display: grid;
+    width:auto;
+    grid-template-columns: repeat(2,1fr);
+    gap: 16px;
+}
