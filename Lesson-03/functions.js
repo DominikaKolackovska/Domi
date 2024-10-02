@@ -5,12 +5,20 @@
 console.log(`1.TransformFahrenheitToCelsius`)
 console.log(``)
 
-const fahrenheitValue = 48;
+/*const fahrenheitValue = 48;
 const transformFahrenheitToCelsius = (fahrenheitValue) => {
     return (fahrenheitValue - 32) * 5 / 9;
 }
 const celsius = transformFahrenheitToCelsius(fahrenheitValue);
 console.log(`Fahrenheit to Celsius is ${celsius.toFixed(2)}°C`)
+*/
+
+const fahrenheitValue = 48;
+const transformFahrenheitToCelsius = (fahrenheitValue) => {
+    return Math.round(fahrenheitValue - 32) * 5 / 9;
+}
+const celsius = transformFahrenheitToCelsius(fahrenheitValue);
+console.log(`Fahrenheit to Celsius is ${celsius}°C`)
 
 
 const celsiusValue = 9;
@@ -36,6 +44,7 @@ const array = [9,3,54,12,867,98,6];
 const array2 = [8,43,365,9,793];
 
 const bothArray = [...array,...array2];
+
 /*const biggestNumOfFirstArray = biggestNumber(...array); 
 const biggestNumOfSecondArray = biggestNumber(...array2); 
 */
@@ -59,15 +68,15 @@ console.log(``)
 console.log(`3.Arrow Funkce a Implicitní Return`)
 console.log(``)
 
-const fahrenheitValue02 = 48;
-const transformFahrenheitToCelsius02 = (fahrenheitValue02) => (fahrenheitValue02 - 32) * 5 / 9;
-const celsius02 = transformFahrenheitToCelsius(fahrenheitValue02);
-console.log(`Fahrenheit to Celsius is ${celsius02.toFixed(2)}°C`)
+const fahrenheitValues = 48;
+const transformFahrenheitValue = (fahrenheitValues) => Math.round(fahrenheitValues - 32) * 5 / 9;
+const celsiuss = transformFahrenheitValue(fahrenheitValues);
+console.log(`Fahrenheit to Celsius is ${celsiuss}°C`)
 
-const celsiusValue02 = 9;
-const transformCelsiusToFahrenheit02=(celsiusValue02) => Math.round(celsiusValue02 * 9/5) + 32;
-const fahrenheit02 = (transformCelsiusToFahrenheit(celsiusValue02));
-console.log(`Celsius to Fahrenheit is ${fahrenheit02}°F`)
+const celsiusValues = 9;
+const transformCelsiusValue=(celsiusValues) => Math.round(celsiusValues * 9/5) + 32;
+const fahrenheits = (transformCelsiusValue(celsiusValues));
+console.log(`Celsius to Fahrenheit is ${fahrenheits}°F`)
 
 /*  Funkce Vyššího Řádu:
 Napište funkci vyššího řádu modifyArray, která přijme pole a transformační
@@ -89,8 +98,8 @@ const modifyArray = (array,transformFuntion) => {
     return array.map(transformFuntion);
 }
 //const numm = [1,2,3,4,5,9];
-const SquareRootOfTwo =(result)=> Math.sqrt(result);
-const transformedArray = modifyArray(result,SquareRootOfTwo);
+const squareRootOfTwo =(result)=> Math.sqrt(result);
+const transformedArray = modifyArray(result,squareRootOfTwo);
 
 console.log(transformedArray);
 
