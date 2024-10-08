@@ -27,14 +27,14 @@ interface User {
         
         Implementujte zpracování chyb pomocí try...catch.
         ● V případě selhání načítání dat z API zobrazte uživatelsky přívětivou chybovou zprávu.
-        ● Zamyslete se nad tím, jaká chybová zpráva by byla vhodná a informativní.
-        */
+        ● Zamyslete se nad tím, jaká chybová zpráva by byla vhodná a informativní.*/
+        
 
-const apiUrl = `https://jsonplaceholder.typicode.com/users`;
+const apiurl = `https://jsonplaceholder.typicode.com/users`;
 
 async function fetchUsers(): Promise<User[]> {
     try {
-      const response = await fetch(apiUrl);
+      const response = await fetch(apiurl);
       if (!response.ok) {
         throw new Error(`Error loading data. Check your connection and try again.`);
       }
@@ -56,9 +56,9 @@ async function fetchUsers(): Promise<User[]> {
          ● Formátujte a zobrazte načtená uživatelská data pomocí šablonových literálů.
          ● Ujistěte se, že data jsou prezentována přívětivě a čitelně.
          ● Použijte například console.table   */
-/* 
+
 fetchUsers().then(users => {
     console.table(users,[`id`, `name`, `email`, `username`]);
-  });*/
+  });
 
 fetchUsers()
