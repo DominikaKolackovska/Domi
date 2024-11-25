@@ -1,0 +1,56 @@
+/* src/App.css */
+
+/* Basic reset and layout adjustments */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  height: 100%;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Ensure the content area expands to fill available space and footer sticks to the bottom */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Main content area */
+.main-content {
+  flex-grow: 1;
+  padding: 16px;
+}
+
+/* Rive canvas styling */
+canvas {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+/* Typography and spacing adjustments */
+h4 {
+  margin-bottom: 24px;
+  font-weight: 500;
+  color: #1976d2;
+}
+
+.typography-functionalities {
+  margin-top: 16px;
+  color: #666;
+}
+
+body.dark-mode h4 {
+  color: #bb86fc;
+}
