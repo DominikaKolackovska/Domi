@@ -56,7 +56,7 @@
     flex-wrap: wrap;
     align-items: flex-start;
     align-content: center;
-    padding: 0 var(--padding-l);
+    padding: 0 var(--padding-l) var(--padding-l) var(--padding-l) ;
     gap: 32px;
   }
   

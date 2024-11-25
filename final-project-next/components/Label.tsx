@@ -1,20 +1,20 @@
-import { useContext } from "react";
+import React from 'react';
+import styles from '../styles/label.module.css';
 
-type Props = {
-  htmlFor: string;
+interface LabelProps {
+  text: string;
   children: React.ReactNode;
-};
+  className?: string;
+}
 
-export const Label = ({ children, htmlFor }: Props) => {
- 
+const Label: React.FC<LabelProps> = ({ text, children, className = '' }) => {
+  const labelClasses = [styles.base, className].filter(Boolean).join(' ');
+
   return (
-    <label
-      className={`block text-sm font-medium leading-6 text-gray-900 ${
-        theme === "dark" && "text-white"
-      }`}
-      htmlFor={htmlFor}
-    >
+    <label className={labelClasses} htmlFor={text}>
       {children}
     </label>
   );
 };
+
+export { Label };
