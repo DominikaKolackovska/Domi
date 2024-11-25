@@ -1,0 +1,97 @@
+.container {
+    width: auto;
+    display:flex;
+    gap:72px;
+    justify-content: center;
+    align-items: center;
+  }
+  .heading{
+    height: 100%; 
+    inline-size: auto;            
+    display: column;
+    justify-content: center;
+    align-items: center;
+   } 
+
+   .showcase{
+    background-color: var(--primary-color-inverted);
+    width: 668px;
+    flex-wrap: wrap;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    display:column;
+   }
+
+  .title {
+    font-size: var(--font-size-xxl);
+    font-weight: 600;
+    line-height: 60%;
+    margin-bottom: var(--padding-m);
+    color: var(--primary-color);
+  }
+  .subtitle {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    line-height: 100%;
+    color: var(--primary-color);
+  }
+  
+  .containerPreview{
+    justify-content: center;
+    height:264px;
+    padding:0 var(--padding-l);
+    background-color:#EFF0F0;
+    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+    align-items: center;
+    display:flex;
+  }
+
+  .preview{
+    padding: var(--padding-xl);
+  }
+  
+  .controls {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: center;
+    padding: 0 var(--padding-l);
+    gap: 32px;
+  }
+  
+  .showcaseTitle{
+    font-size: var(--font-size-ml);
+    font-weight: 600;
+    display: flex;
+    box-sizing: border-box;
+    padding: var(--padding-s) var(--padding-l);
+  }
+  .controlGroup {
+    display: flex;
+    flex-direction: column;
+    width: 269.74px;
+    height: 76px;
+  }
+  
+  .label {
+    font-size: var(--font-size-s);
+    font-weight: 500;
+    margin-bottom: calc(var(--padding-s) / 2);
+    color: var(--primary-color);
+  }
+  
+  .select,
+  .checkbox {
+    padding: calc(var(--padding-s) / 2);
+    font-size: var(--font-size-m);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    background-color: var(--chip-bg);
+    color: var(--primary-color);
+  }
+  
+  .preview {
+    text-align: center;
+  }
+  
