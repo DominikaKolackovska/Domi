@@ -1,0 +1,21 @@
+.buttonIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: var(--padding-s);
+    font-size: var(--font-size-m);
+    color: var(--primary-color);
+    border-radius: var(--border-radius-sm);
+    transition: background-color 0.2s;
+  }
+  
+  .buttonIcon:hover {
+    background-color: var(--hover-color);
+  }
+  
+  .buttonIcon:focus {
+    outline: 2px solid var(--accent-color);
+  }
