@@ -1,78 +1,48 @@
 import React, { useState } from 'react';
-import { Button } from '../components/Button';
-import styles from '../styles/showcase.module.css';
-import { SelectInput } from '../components/SelectInput';
+import styles from '@/styles/showcase.module.css';
+import { SegmentedTabs }  from '@/components/SegmentedTabs';
+import  ButtonPage  from '@/pages/button';
+import  SelectInputPage  from '@/pages/selectInput';
+import  SegmentedTabsPage  from '@/pages/tabs';
+import  TextInputPage  from '@/pages/textInput';
 
-const Showcase: React.FC = () => {
-  const [variant, setVariant] = useState<'primary' | 'secondary'>('primary');
-  const [size, setSize] = useState<'small' | 'medium' | 'large'>('medium');
-  const [disabled, setDisabled] = useState<boolean>(false);
+const Homepage: React.FC = () => {
+  const [activeTab, setActiveTab] = useState<string>('tab1');
 
-  const handleVariantChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setVariant(e.target.value as 'primary' | 'secondary');
-  };
+  const tabs = [
+    { id: 'tab1', label: 'Button' },
+    { id: 'tab2', label: 'Select Input' },
+    { id: 'tab3', label: 'Tabs' },
+    { id: 'tab4', label: 'Showcase' },
+  ];
 
-  const handleSizeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setSize(e.target.value as 'small' | 'medium' | 'large');
-  };
-
-  const handleDisabledChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setDisabled(e.target.value === 'true');
+  const handleTabChange = (tabId: string) => {
+    setActiveTab(tabId);
   };
 
   return (
     <div className={styles.container}>
+
       <div className={styles.heading}>
         <h1 className={styles.title}>A0</h1>
-        <h1 className={styles.subtitle}>Design system</h1>
+        <h1 className={styles.subtitle}>placeholder</h1>
       </div>
-      <div className={styles.showcase}>
-        <div className={styles.containerPreview}>
-          <div className={styles.preview}>
-            <Button variant={variant} size={size} disabled={disabled}>
-              {variant === 'primary' ? 'Primary Button' : 'Secondary Button'}
-            </Button>
-          </div>
+      <div className={styles.contentContainer}>
+        <SegmentedTabs
+          tabs={tabs}
+          defaultActiveTab="tab1"
+          onChange={handleTabChange}
+        />
+        <div className={styles.content}>
+          {activeTab === 'tab1' && <ButtonPage />} 
+          {activeTab === 'tab2' && <SelectInputPage/>} 
+          {activeTab === 'tab3' && <SegmentedTabsPage/>} 
+          {activeTab === 'tab4' && <TextInputPage/>} 
         </div>
-
-        <h1 className={styles.showcaseTitle}>Try component by yourself</h1>
-
-        <div className={styles.controls}>
-            <SelectInput
-              name="variant"
-              label="Variant"
-              value={variant}
-              handleChange={handleVariantChange}
-              options={[
-                { value: 'primary', label: 'Primary' },
-                { value: 'secondary', label: 'Secondary' },
-              ]}
-            />
-            <SelectInput
-              name="size"
-              label="Size"
-              value={size}
-              handleChange={handleSizeChange}
-              options={[
-                { value: 'small', label: 'Small' },
-                { value: 'medium', label: 'Medium' },
-                { value: 'large', label: 'Large' },
-              ]}
-            />
-            <SelectInput
-              name="disabled"
-              label="Disabled"
-              value={disabled.toString()}
-              handleChange={handleDisabledChange}
-              options={[
-                { value: 'false', label: 'No' },
-                { value: 'true', label: 'Yes' },
-              ]}
-            />
-          </div>
-        </div>
+        
       </div>
+    </div>
   );
 };
 
-export default Showcase;
+export default Homepage;
