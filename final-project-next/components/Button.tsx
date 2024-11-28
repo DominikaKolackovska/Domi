@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/button.module.css';
+import styles from '@/styles/button.module.css';
 
 type ButtonVariant = 'primary' | 'secondary';
 type ButtonSize = 'small' | 'medium' | 'large';
@@ -15,7 +15,7 @@ const Button: React.FC<ButtonProps> = ({
   variant = 'primary',
   size = 'medium',
   disabled = false,
-  children,
+  children
 }) => {
   const buttonClasses = [
     styles.base,
@@ -35,4 +35,4 @@ const Button: React.FC<ButtonProps> = ({
   );
 };
 
-export { Button };
+export  { Button } ;

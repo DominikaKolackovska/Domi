@@ -16,26 +16,45 @@
    .showcase{
     background-color: var(--primary-color-inverted);
     width: 668px;
+    height: 600px;
     flex-wrap: wrap;
     border-radius: var(--border-radius-lg);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     display:column;
    }
 
+  .preview{
+    padding: var(--padding-xl);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .title {
     font-size: var(--font-size-xxl);
     font-weight: 600;
     line-height: 60%;
     margin-bottom: var(--padding-m);
-    color: var(--primary-color);
+    color: var(--text-color);
   }
   .subtitle {
     font-size: var(--font-size-xl);
     font-weight: 600;
     line-height: 100%;
-    color: var(--primary-color);
+    color: var(--text-color);
   }
   
+
+  .containerPreviewShowcase{
+    justify-content: center;
+    height:0px;
+    padding:0 var(--padding-l);
+    background-color:#EFF0F0;
+    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+    align-items: center;
+    display:flex;
+  }
+
   .containerPreview{
     justify-content: center;
     height:264px;
@@ -45,21 +64,24 @@
     align-items: center;
     display:flex;
   }
-
-  .preview{
-    padding: var(--padding-xl);
-  }
-  
   .controls {
     display: flex;
+    width: 100%;
+    max-width: 260px;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-start;
     align-content: center;
-    padding: 0 var(--padding-l) var(--padding-l) var(--padding-l) ;
     gap: 32px;
   }
   
+  .controlsShowcase {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding:0 var(--padding-l) var(--padding-l) var(--padding-l);
+    gap: 32px;
+  }
+
   .showcaseTitle{
     font-size: var(--font-size-ml);
     font-weight: 600;
@@ -78,7 +100,7 @@
     font-size: var(--font-size-s);
     font-weight: 500;
     margin-bottom: calc(var(--padding-s) / 2);
-    color: var(--primary-color);
+    color: var(--text-color);
   }
   
   .select,
@@ -88,10 +110,17 @@
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius-sm);
     background-color: var(--chip-bg);
-    color: var(--primary-color);
+    color: var(--text-color);
   }
-  
-  .preview {
-    text-align: center;
+
+  .contentContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
   }
-  
+
+  .selectWrapper{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+  }

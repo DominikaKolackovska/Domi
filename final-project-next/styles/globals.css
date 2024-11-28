@@ -3,15 +3,17 @@
   --primary-color: #191919;
   --primary-color-inverted: #FFFFFF;
   --secondary-color: #F1F1F1;
+  --tertiary-color:#8F8A8A;
   --accent-color: #FF8B4A;
   --accent-color-secondary: #FFE8DB;
   --background-color: #F7F7F7;
   --border-color: #EFEFEF;
-  --chip-bg: #F7F7F7;
+  --hover-color: #F7F7F780;
   --hover-color-accent: #EF742D;
   --hover-color-secondary: #E9E9E9;
+  --selection-color: #277D7E;
+  --error-color: #dd2222;
 
-  
   /* Fonts */
   --font-family: 'Inter', sans-serif;
   
@@ -22,6 +24,7 @@
   --font-size-ml: 32px;
   --font-size-m: 16px;
   --font-size-s: 14px;
+  --font-size-xs: 12px;
   
   /* Spacing */
   --padding-xl: 80px;
@@ -29,16 +32,14 @@
   --padding-m: 24px;
   --padding-s: 16px;
   --padding-xs: 8px;
-  
+  --padding-xxs: 4px;
+
   /* Border Radius */
   --border-radius-lg: 24px;
   --border-radius-sm: 8px;
 }
 
-body {
-  height: 100%; 
-  width: 100%; 
-  padding: 160px 0px;                     
+body {              
   display: flex;
   justify-content: center;
   align-items: center;
