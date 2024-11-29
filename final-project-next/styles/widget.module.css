@@ -1,0 +1,26 @@
+.widget {
+    background-color: var(--primary-color-inverted);
+    border-radius: var(--border-radius-lg);
+    padding: var(--padding-l);
+    width: 600px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  
+  .title {
+    font-size: var(--font-size-mll);
+    font-weight: bold;
+    line-height: 40%;
+    margin-bottom: var(--padding-xxs);
+  }
+  
+  .description {
+    font-size: var(--font-size-ml);
+    color: var(--tertiary-color);
+    padding-bottom: var(--padding-s);
+  }
