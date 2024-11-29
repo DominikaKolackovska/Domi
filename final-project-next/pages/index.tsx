@@ -1,23 +1,17 @@
-import React, { useState } from 'react';
+import { useRouter } from 'next/router';
 import styles from '@/styles/showcase.module.css';
-import { SegmentedTabs }  from '@/components/SegmentedTabs';
-import  ButtonPage  from '@/pages/button';
-import  SelectInputPage  from '@/pages/selectInput';
-import  SegmentedTabsPage  from '@/pages/tabs';
-import  TextInputPage  from '@/pages/textInput';
+import { Widget } from '@/components/Widget';
+
 
 const Homepage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<string>('tab1');
 
-  const tabs = [
-    { id: 'tab1', label: 'Button' },
-    { id: 'tab2', label: 'Select Input' },
-    { id: 'tab3', label: 'Tabs' },
-    { id: 'tab4', label: 'Showcase' },
-  ];
+  const router = useRouter();
 
-  const handleTabChange = (tabId: string) => {
-    setActiveTab(tabId);
+  const handleComponentsButtonClick = () => {
+    router.push('../components');
+  };
+  const handleShowcasesButtonClick = () => {
+    router.push('../showcase');
   };
 
   return (
@@ -27,18 +21,21 @@ const Homepage: React.FC = () => {
         <h1 className={styles.title}>A0</h1>
         <h1 className={styles.subtitle}>placeholder</h1>
       </div>
-      <div className={styles.contentContainer}>
-        <SegmentedTabs
-          tabs={tabs}
-          defaultActiveTab="tab1"
-          onChange={handleTabChange}
+      <div className={styles.containerWidget}>
+
+        <Widget
+          title="Explore Components"
+          description="All the components you need for cohesive, efficient design."
+          onButtonClick={handleComponentsButtonClick}
+          buttonLabel="See more"
         />
-        <div className={styles.content}>
-          {activeTab === 'tab1' && <ButtonPage />} 
-          {activeTab === 'tab2' && <SelectInputPage/>} 
-          {activeTab === 'tab3' && <SegmentedTabsPage/>} 
-          {activeTab === 'tab4' && <TextInputPage/>} 
-        </div>
+
+        <Widget
+          title="Showcase demo"
+          description="Experience our components in real-time with interactive demos."
+          onButtonClick={handleShowcasesButtonClick}
+          buttonLabel="Let's begin"
+        />
         
       </div>
     </div>
