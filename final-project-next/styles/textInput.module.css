@@ -7,7 +7,6 @@
 .textInput {
   display: flex;
   flex-direction: column;
-  margin-bottom: var(--padding-xs);
 }
 
 .label {
@@ -30,14 +29,18 @@
 }
 
 .input:focus {
-  border-color: 4px solid var(--selection-color);
+  border-color: var(--accent-color);
+  outline: none;
 }
+
+/* Error state */
 
 .errorInput {
   border-color: var(--error-color);
 }
 
 .errorText {
+  border-color: var(--error-color);
   color: var(--error-color);
   font-size: var(--font-size-xs);
   margin-top: var(--padding-xxs);

@@ -44,10 +44,6 @@ const SelectInputPage: React.FC = () => {
           label="State"
           value={state}
           handleChange={handleVariantChange}
-          state={state}
-          className={`${state === 'success' ? styles.success : ''} ${
-            state === 'error' ? styles.error : ''
-          }`}
           options={[
             { value: 'default', label: 'Default' },
             { value: 'success', label: 'Success' },

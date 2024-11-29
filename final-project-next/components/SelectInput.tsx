@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
-import  {Label}  from '@/components/Label';
+import { Label } from '@/components/Label';
 import styles from '@/styles/selectInput.module.css';
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowDown } from 'react-icons/io';
 
 type SelectOption = {
   value: string;
@@ -46,18 +46,17 @@ const SelectInput: React.FC<SelectInputProps> = ({
   }, []);
 
   const handleSelectClick = () => {
-    if (!disabled) setIsOpen((prev) => !prev); 
+    if (!disabled) setIsOpen((prev) => !prev);
   };
 
-  const stateClass = {
-    default: styles.default,
-    selected: styles.selected,
-    success: styles.success,
-    error: styles.error,
-  }[state];
+  const stateClass = `${styles[state]}`;
 
   return (
-    <div className={`${styles.wrapper} ${className} ${disabled ? styles.disabled : ''}`.trim()}>
+    <div
+      className={`${styles.wrapper} ${className} ${
+        disabled ? styles.disabled : ''
+      }`.trim()}
+    >
       <Label>{label}</Label>
       <div className={`${styles.selectWrapper} ${stateClass}`}>
         <div
@@ -70,7 +69,7 @@ const SelectInput: React.FC<SelectInputProps> = ({
           {options.find((option) => option.value === value)?.label || 'Select an option'}
           <IoIosArrowDown className={styles.icon} />
         </div>
-        
+
         {isOpen && !disabled && (
           <div className={styles.dropdown} ref={dropdownRef}>
             {options.map((option, index) => (
@@ -86,7 +85,9 @@ const SelectInput: React.FC<SelectInputProps> = ({
                 >
                   {option.label}
                 </div>
-                {index < options.length - 1 && <div className={styles['dropdown-divider']}></div>}
+                {index < options.length - 1 && (
+                  <div className={styles['dropdown-divider']}></div>
+                )}
               </React.Fragment>
             ))}
           </div>

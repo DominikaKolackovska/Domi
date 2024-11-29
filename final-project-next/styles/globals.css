@@ -59,6 +59,6 @@ body {
 form {
   display: flex;
   flex-direction: column;
-  gap: var(--padding-s);
+  gap: var(--padding-xs);
 }
 
