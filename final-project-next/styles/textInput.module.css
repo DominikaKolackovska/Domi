@@ -6,10 +6,8 @@
 
 .textInput {
   display: flex;
-  width: 100%;
-  max-width: 270px;
   flex-direction: column;
-  margin-bottom: var(--padding-m);
+  margin-bottom: var(--padding-xs);
 }
 
 .label {
@@ -18,12 +16,16 @@
 }
 
 .input {
-  width: 100%;
-  padding: 0 var(--padding-s);
+  padding-left: var(--padding-s);
+  line-height: 40%;
   font-size: var(--font-size-m);
   border: 1.8px solid var(--border-color);
   border-radius: var(--border-radius-sm);
-  resize: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--padding-xs);
   min-height: 40px;
 }
 

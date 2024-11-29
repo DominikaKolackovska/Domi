@@ -94,7 +94,7 @@ const TextInputPage: React.FC = () => {
               error={error2}
             />
           </div>
-          <Button disabled={!isFormValid}>Submit</Button>
+          <Button label="Submit" disabled={!isFormValid} />
         </form>
         </div>
       </div>

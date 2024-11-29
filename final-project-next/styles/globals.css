@@ -21,7 +21,8 @@
   --font-size-xxl: 140px;
   --font-size-xl: 72px;
   --font-size-l: 56px;
-  --font-size-ml: 32px;
+  --font-size-mll: 32px;
+  --font-size-ml: 20px;
   --font-size-m: 16px;
   --font-size-s: 14px;
   --font-size-xs: 12px;
@@ -43,6 +44,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding:var(--padding-xl);
   background-color:var(--background-color);
   font-family: var(--font-family);
 }
+
+.heading{
+  height: 100%;        
+  display: column;
+  justify-content: center;
+  align-items: center;
+ } 
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-s);
+}
+

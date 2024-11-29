@@ -5,23 +5,22 @@
     justify-content: center;
     align-items: center;
   }
-  .heading{
-    height: 100%; 
-    inline-size: auto;            
-    display: column;
-    justify-content: center;
-    align-items: center;
-   } 
 
    .showcase{
     background-color: var(--primary-color-inverted);
-    width: 668px;
-    height: 600px;
+    flex-wrap: wrap;
+    width:660px;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    height:600px;
+   }
+
+   .showcaseDemo{
+    background-color: var(--primary-color-inverted);
     flex-wrap: wrap;
     border-radius: var(--border-radius-lg);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    display:column;
-   }
+  }
 
   .preview{
     padding: var(--padding-xl);
@@ -30,20 +29,24 @@
     justify-content: center;
     align-items: center;
   }
+  
   .title {
     font-size: var(--font-size-xxl);
     font-weight: 600;
     line-height: 60%;
     margin-bottom: var(--padding-m);
     color: var(--text-color);
+    position: absolute;
+    top: 240px; left: 200px;
   }
   .subtitle {
     font-size: var(--font-size-xl);
     font-weight: 600;
     line-height: 100%;
     color: var(--text-color);
+    position: absolute;
+    top: 400px; left: 200px;
   }
-  
 
   .containerPreviewShowcase{
     justify-content: center;
@@ -76,18 +79,30 @@
   
   .controlsShowcase {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    padding:0 var(--padding-l) var(--padding-l) var(--padding-l);
+    align-content: center;
+    padding:var(--padding-s) var(--padding-l) var(--padding-l) var(--padding-l);
+    gap: 24px;
+  }
+
+  .controlsShowcaseComponents {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding:var(--padding-m) var(--padding-l) var(--padding-l) var(--padding-l);
     gap: 32px;
   }
 
+  .showcase.heading{
+    position:fixed;
+  }
+
   .showcaseTitle{
-    font-size: var(--font-size-ml);
+    font-size: var(--font-size-mll);
     font-weight: 600;
     display: flex;
-    box-sizing: border-box;
-    padding: var(--padding-s) var(--padding-l);
+    padding: var(--padding-m) var(--padding-l);
+    margin:0;
   }
   .controlGroup {
     display: flex;
@@ -103,16 +118,6 @@
     color: var(--text-color);
   }
   
-  .select,
-  .checkbox {
-    padding: calc(var(--padding-s) / 2);
-    font-size: var(--font-size-m);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius-sm);
-    background-color: var(--chip-bg);
-    color: var(--text-color);
-  }
-
   .contentContainer{
     display: flex;
     flex-direction: column;
@@ -120,7 +125,13 @@
   }
 
   .selectWrapper{
-    width:100%;
+    width: 100%;
     display: flex;
     flex-direction: row;
+  }
+
+  .containerWidget{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
   }
