@@ -1,0 +1,46 @@
+.textAreaContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-m);
+  }
+  
+  .textArea {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .label {
+    font-size: var(--font-size-m);
+    margin-bottom: var(--padding-xs);
+  }
+  
+  .textarea {
+    padding: var(--padding-s);
+    line-height: 1.5;
+    font-size: var(--font-size-m);
+    border: 1.8px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    min-height: 80px;
+    height: 64px;
+    width: 380px;
+    resize: none;
+    font-family: var(--font-family);
+  }
+  
+  .textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+  }
+
+  /* Error state */
+  
+  .errorTextArea {
+    border-color: var(--error-color);
+  }
+  
+  .errorText {
+    color: var(--error-color);
+    font-size: var(--font-size-xs);
+    margin-top: var(--padding-xxs);
+  }
+  
