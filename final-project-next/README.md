@@ -1,161 +1,212 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
 ## Component Library Documentation
 Welcome to the documentation for your React component library! This library provides a set of reusable, styled, and accessible components for building feature-rich user interfaces.
 
 Table of Contents
 1. Introduction
 2. Installation
-3. Components Overview
-        Button
-        Label
-        SegmentedTabs
-        SelectInput
-        Tab
-        TextArea
-        TextInput
-        Widget
-4. Examples
+3. Components Overview:
+  - Button
+  - Label
+  - SegmentedTabs
+  - SelectInput
+  - Tab
+  - TextArea
+  - TextInput
+  - Widget
+4. Pages Overview
+  - Homepage
+  - Components Page
+  - Showcase Page
+  - Text Input Page
+  - Select Input Page
+  - Tabs Page
+5. Running the App
+6. Technologies Used
+7. License
 
 ## Introduction
-This component library provides modular and customizable components for building dynamic user interfaces. Each component is styled with CSS modules to ensure scoped and maintainable styles. The library emphasizes accessibility and usability across devices.
+This component library provides modular and customizable components for building dynamic user interfaces. 
+Each component is styled with CSS modules to ensure scoped and maintainable styles. 
+The library emphasizes accessibility and usability across devices.
+
+This web app demonstrates various reusable UI components built with React. 
+The components are organized into different pages that showcase their functionality and allow users to interact with them directly.
+
+## The features:
+
+A selection of UI components such as buttons, text inputs, select inputs, and tabs.
+Interactive forms and showcases where users can try out different component states.
+A simple, clean design with responsive UI.
+
+  - Component Showcase: A page where users can explore different UI components like buttons, select inputs, and tabs.
+  - Interactive Demo: Pages that let users interact with components in different states (e.g., default, success, error).
+  - Form Validation: Interactive forms that include input validation, including error handling for text input fields.
+  - Tabs: A segmented tabs component that switches content based on the active tab.
 
 ## Installation
-bash
-Copy code
+
+```bash
 npm install final-project-next
+```
+
 Import the components into your project as needed:
 
-tsx
-Copy code
-import { Button, TextInput, Widget } from 'your-component-library';
-Components Overview
+```
+import { Button, TextInput, Widget } from 'your-component-library'
+```
+
+# Components Overview
 
 ## Button
 A customizable button component with support for variants, sizes, and states.
 
 Props:
-label: The text displayed inside the button.
-variant: Style of the button (primary | secondary).
-size: Button size (small | medium | large).
-disabled: Whether the button is disabled.
-onClick: Callback for button click events.
+  - label: The text displayed inside the button.
+  - variant: Style of the button (primary | secondary).
+  - size: Button size (small | medium | large).
+  - disabled: Whether the button is disabled.
+  - onClick: Callback for button click events.
 
 ## Label
 A styled label for associating text with form controls.
 
 Props:
-text: Label text.
-children: Nested components.
-className: Additional CSS classes for customization.
-htmlFor: ID of the associated input element.
+  - text: Label text.
+  - children: Nested components.
+  - className: Additional CSS classes for customization.
+  - htmlFor: ID of the associated input element.
 
 ## SegmentedTabs
 A tab navigation component for switching between views.
 
 Props:
-tabs: Array of tab objects ({ id: string, label: string }).
-defaultActiveTab: ID of the default active tab.
-onChange: Callback when a tab is switched.
-variant: Style variant for the tab (first | middle | last).
+  - tabs: Array of tab objects ({ id: string, label: string }).
+  - defaultActiveTab: ID of the default active tab.
+  - onChange: Callback when a tab is switched.
+  - variant: Style variant for the tab (first | middle | last).
 
 ## SelectInput
 A custom select dropdown for choosing options.
 
 Props:
-label: Label text for the select input.
-options: Array of options ({ value: string, label: string }).
-value: Currently selected value.
-state: Visual state (default | selected | success | error).
-handleChange: Callback for when an option is selected.
-disabled: Whether the dropdown is disabled.
+  - label: Label text for the select input.
+  - options: Array of options ({ value: string, label: string }).
+  - value: Currently selected value.
+  - state: Visual state (default | selected | success | error).
+  - handleChange: Callback for when an option is selected.
+  - disabled: Whether the dropdown is disabled.
 
 
 ## Tab
 A single tab used within the SegmentedTabs component.
 
 Props:
-id: Unique ID of the tab.
-label: Text label for the tab.
-isActive: Whether the tab is currently active.
-state: Tab position (first | middle | last).
-onClick: Callback for tab click events.
+  - id: Unique ID of the tab.
+  - label: Text label for the tab.
+  - isActive: Whether the tab is currently active.
+  - state: Tab position (first | middle | last).
+  - onClick: Callback for tab click events.
 
 
 ## TextArea
 A multi-line text input field.
 
 Props:
-value: Current text value.
-onChange: Callback for text changes.
-placeholder: Placeholder text.
-label: Label for the textarea.
-error: Error message.
-disabled: Whether the textarea is disabled.
-rows: Number of rows (default: 3).
-cols: Number of columns.
+  - value: Current text value.
+  - onChange: Callback for text changes.
+  - placeholder: Placeholder text.
+  - label: Label for the textarea.
+  - error: Error message.
+  - disabled: Whether the textarea is disabled.
+  - rows: Number of rows (default: 3).
+  - cols: Number of columns.
 
 ## TextInput
 A single-line text input field.
 
 Props:
-value: Current text value.
-onChange: Callback for text changes.
-placeholder: Placeholder text.
-type: Input type (e.g., text, password).
-label: Label for the input.
-error: Error message.
-disabled: Whether the input is disabled.
+  - value: Current text value.
+  - onChange: Callback for text changes.
+  - placeholder: Placeholder text.
+  - type: Input type (e.g., text, password).
+  - label: Label for the input.
+  - error: Error message.
+  - disabled: Whether the input is disabled.
 
 ## Widget
 A card-like container with a title, description, and optional button.
 
 Props:
-title: Title of the widget.
-description: Description or content of the widget.
-button: Whether to display a button (default: true).
-onButtonClick: Callback for button clicks.
-buttonLabel: Label for the button.
+  - title: Title of the widget.
+  - description: Description or content of the widget.
+  - button: Whether to display a button (default: true).
+  - onButtonClick: Callback for button clicks.
+  - buttonLabel: Label for the button.
 
-## Notes
+# Notes
 Customize components using the className prop where available.
 Ensure accessibility by providing labels and handling keyboard interactions appropriately.
 For further customization, refer to the styles in the CSS modules.
+
+# Pages Overview
+## Homepage
+The Homepage serves as the landing page for the app, providing an introduction to the web app with options to explore components or start the showcase demos.
+### It features two widgets:
+  - "Explore Components" — directs users to the components page.
+  - "Showcase Demo" — lets users start the interactive demo with real-time components.
+
+## Components Page
+  - The Components Page displays a segmented tab interface that allows users to explore various components: Button, Select Input, and Tabs.
+  - Each tab links to its respective page, which explains and lets users interact with the components.
+  - The component state can be controlled via the segmented tab selection.
+
+## Showcase Page
+  - The Showcase Page is an interactive page where users can try out different UI components like TextInput, SelectInput, and Button.
+  - Users can submit feedback or interact with components based on their state, triggering form submissions or actions.
+
+## Text Input Page
+  - The Text Input Page lets users interact with the TextInput component, showing real-time validation of text input values.
+  - It includes error handling and provides feedback if the input length is below the minimum threshold.
+
+## Select Input Page
+  - The Select Input Page lets users interact with the SelectInput component in different states (e.g., success, error, disabled).
+  - Users can change the state of the SelectInput using dropdowns and see how it behaves in real-time.
+
+## Tabs Page
+  - The Tabs Page showcases the Tab component in an interactive demo.
+  - Users can toggle between different variants (e.g., first, middle, last) and see how the tabs react to the isActive state.
+
+
+## Running the App
+To run the app locally, follow these steps:
+
+###  1. Clone the repository:
+
+```bash
+git clone https://github.com/DominikaKolackovska/domi.git
+cd domi
+```
+
+### 2. Install dependencies:
+
+```bash
+npm install
+```
+
+### 3. Start the development server:
+
+```bash
+npm run dev
+```
+### 4. Open the app in your browser at http://localhost:3000.
+
+# Used
+  - React: A JavaScript library for building user interfaces.
+  - Next.js: A React framework for server-side rendering and static website generation.
+  - CSS Modules: For scoped and modular styling.
+  - EmailJS: For handling form submissions via email.
+
+# License
+This project is licensed under the MIT License.
+
+Feel free to adjust the sections or add more details as necessary to match your specific app setup.
