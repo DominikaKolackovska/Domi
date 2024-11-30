@@ -177,6 +177,85 @@ The Homepage serves as the landing page for the app, providing an introduction t
   - Users can toggle between different variants (e.g., first, middle, last) and see how the tabs react to the isActive state.
 
 
+## Styling
+
+### Global Styling
+
+This project uses CSS custom properties (CSS variables) for a consistent and scalable design. The variables are defined in `:root` for easy customization across the app.
+
+#### **Colors**
+
+The color palette is defined with the following variables:
+
+- `--primary-color`: The main text color, a dark shade of gray (`#191919`).
+- `--primary-color-inverted`: The inverted color of the primary color, used for light text on dark backgrounds (`#FFFFFF`).
+- `--secondary-color`: Light gray (`#F1F1F1`), used for background sections.
+- `--tertiary-color`: A medium gray (`#8F8A8A`), used for borders and subtle text.
+- `--accent-color`: An orange shade (`#FF8B4A`), used for buttons, highlights, and other accent elements.
+- `--accent-color-secondary`: A lighter orange (`#FFE8DB`), used for lighter background highlights.
+- `--background-color`: Light grayish background color for the page (`#F7F7F7`).
+- `--border-color`: Soft border color (`#EFEFEF`).
+- `--hover-color`: A semi-transparent hover color (`#F7F7F780`), applied to elements when hovered.
+- `--hover-color-accent`: A darker hover color for accent elements (`#EF742D`).
+- `--hover-color-secondary`: A light hover effect for secondary elements (`#E9E9E9`).
+- `--selection-color`: A teal selection color for text and components (`#277D7E`).
+- `--error-color`: A bright red for error messages and inputs (`#dd2222`).
+
+#### **Fonts**
+
+- `--font-family`: Uses the 'Inter' sans-serif font family, which is modern and clean, ideal for UI components.
+  
+#### **Font Sizes**
+
+Font sizes are scaled using the following variables, which provide consistency across the app:
+
+- `--font-size-xxl`: 140px
+- `--font-size-xl`: 72px
+- `--font-size-l`: 56px
+- `--font-size-mll`: 32px
+- `--font-size-ml`: 20px
+- `--font-size-m`: 16px
+- `--font-size-s`: 14px
+- `--font-size-xs`: 12px
+
+These variables help maintain consistency in font sizes across components such as headings, subtitles, and form elements.
+
+#### **Spacing**
+
+The spacing variables are used to create uniform spacing throughout the layout:
+
+- `--padding-xl`: 80px (used for large padding, e.g., around sections or content).
+- `--padding-l`: 48px
+- `--padding-m`: 24px
+- `--padding-s`: 16px
+- `--padding-xs`: 8px
+- `--padding-xxs`: 4px
+
+These variables help with margin and padding adjustments to ensure consistency across the design.
+
+#### **Border Radius**
+
+These variables define the radius of corners for elements, contributing to the rounded look of buttons, inputs, and other UI elements:
+
+- `--border-radius-lg`: 24px
+- `--border-radius-sm`: 8px
+
+### Body Styling
+
+The body of the app is centered both vertically and horizontally with the following style:
+
+```css
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--padding-xl);
+  background-color: var(--background-color);
+  font-family: var(--font-family);
+  min-height: 100vh;
+}
+```
+
 ## Running the App
 To run the app locally, follow these steps:
 
@@ -190,8 +269,13 @@ cd domi
 ### 2. Install dependencies:
 
 ```bash
-npm install
+npm install 
 ```
+### Used
+  - React: A JavaScript library for building user interfaces.
+  - Next.js: A React framework for server-side rendering and static website generation.
+  - CSS Modules: For scoped and modular styling.
+  - EmailJS: For handling form submissions via email.
 
 ### 3. Start the development server:
 
@@ -199,12 +283,6 @@ npm install
 npm run dev
 ```
 ### 4. Open the app in your browser at http://localhost:3000.
-
-# Used
-  - React: A JavaScript library for building user interfaces.
-  - Next.js: A React framework for server-side rendering and static website generation.
-  - CSS Modules: For scoped and modular styling.
-  - EmailJS: For handling form submissions via email.
 
 # License
 This project is licensed under the MIT License.
